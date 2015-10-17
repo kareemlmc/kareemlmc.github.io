@@ -16,6 +16,49 @@
       <link href="assets/css/application-startup.css" rel="stylesheet">
 
       <script src="//load.sumome.com/" data-sumo-site-id="e9b05ab75d241da8006c1d14ddae6209aaea1618d7b7472593c8eebe27424ff5" async="async"></script>
+
+
+      <script type="text/javascript">
+        $(document).ready( function () {
+          $("#mc-embedded-subscribe-form").submit(function ( event ) {
+            $("#mce-error-response").hide();
+              console.log($(this).attr('method'));
+              console.log($(this).attr('action'));
+              console.log($(this).serialize);
+            $.ajax({
+              type: $(this).attr('method'),
+              url: $(this).attr('action'),
+              data: $(this).serialize(),
+              cache       : false,
+              dataType    : 'json',
+              contentType: "application/json; charset=utf-8",
+              error       : function(err) {
+                            $("#mce-error-response").html("There was an error.  Can you please try again?").show();
+              },
+              success     : function(data) {
+                if (data.result != "success") {
+                    // Something went wrong, do something to notify the user. maybe alert(data.msg);
+                    $("#mce-error-response").html(data.msg).show();
+                    return false;
+                } else {
+                    // It worked, carry on...
+                    $("#mc_embed_signup").replaceWith("<div class='alert alert-success'>Boom, you're in the club. You'll be lowering your churn in no time.</div>")
+                    return false;
+                }
+              }
+            });
+          return false;
+          });
+        });
+      </script>
+
+      <script type="text/javascript">
+        // segment.com code
+        !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t){var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(e,n)};analytics.SNIPPET_VERSION="3.1.0";
+        analytics.load("ZCiAmPAcmApDpjQYrWkwdmFiVtm5pSxB");
+        analytics.page("Home")
+        }}();
+      </script>
   </head>
 <body>
 
@@ -58,9 +101,15 @@
       <p class="lead" style="color: #fff;">
         30% of SaaS companies have an unacceptable level of churn<super>*</super>.  Does yours?
       </p>
-      <form class="form-inline">
-        <input class="form-control m-b" placeholder="Email Address">
-        <button class="btn btn-danger m-b">Get a free churn analysis</button>
+      <form action="//lowermychurn.us8.list-manage.com/subscribe/post-json?u=a60d5de77b0be81f53906fbc9&amp;id=b6306062d4&amp;c=?" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate form-inline" novalidate="">
+          <input type="email" value="" name="EMAIL" class="form-control m-b required email" id="mce-EMAIL" placeholder="Your email address">
+
+          <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+          <button type="submit" class="btn btn-danger m-b">Get a free churn analysis</button>
+          <div id="mce-responses" class="clear">
+            <div class="response" id="mce-error-response" style="color: #a81515; display:none"></div>
+            <div class="response" id="mce-success-response" style="display:none"></div>
+          </div>
       </form>
       <p class="text-muted"><super>*</super>According to the Pacific Crest Private SaaS Company Survey</p>
     </div>
@@ -114,9 +163,15 @@
       <p class="lead" style="color: #fff;">
         Learn how we reduced one SaaS company's churn by 87.5%
       </p>
-      <form class="form-inline">
-        <input class="form-control m-b" placeholder="Email Address">
-        <button class="btn btn-danger m-b">Show me the case study</button>
+      <form action="//lowermychurn.us8.list-manage.com/subscribe/post-json?u=a60d5de77b0be81f53906fbc9&amp;id=b6306062d4&amp;c=?" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate form-inline" novalidate="">
+          <input type="email" value="" name="EMAIL" class="form-control m-b required email" id="mce-EMAIL" placeholder="Your email address">
+
+          <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+          <button type="submit" class="btn btn-danger m-b">Show me the Case Study</button>
+          <div id="mce-responses" class="clear">
+            <div class="response" id="mce-error-response" style="color: #a81515; display:none"></div>
+            <div class="response" id="mce-success-response" style="display:none"></div>
+          </div>
       </form>
     </div>
   </div>
@@ -133,8 +188,8 @@
       <div class="row">
         <div class="col-xs-3 col-xs-offset-1" >
           <h5 class="m-t-0 m-b text-muted">Week 1</h5>
-          <h4>Research & Business Review</h4>
-          <p class="text-left">We'll baseline your churn, gather your qualitative and quantitative churn data, and dive into your product to get the full context of your business. </p>
+          <h4>Research & Review</h4>
+          <p class="text-left">We'll baseline your churn, look at what you've tried to lower it, gather your qualitative and quantitative churn data, and dive into your product to understand the full context of your business. </p>
         </div>
 
         <div class="col-xs-3 col-xs-offset-1">
@@ -181,14 +236,22 @@
 
 
   <div class="block app-ribbon p-y-lg">
-    <div class="container text-center">
+    <div class="container text-center mc_embed_signup_scroll">
       <p class="lead" style="color: #fff;">
         Get a free, no-risk churn analysis.
       </p>
-      <form class="form-inline">
-        <input class="form-control m-b" placeholder="Email Address">
-        <button class="btn btn-danger m-b">Get a free churn analysis</button>
+      <form action="//lowermychurn.us8.list-manage.com/subscribe/post-json?u=a60d5de77b0be81f53906fbc9&amp;id=b6306062d4&amp;c=?" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate form-inline" novalidate="">
+          <input type="email" value="" name="EMAIL" class="form-control m-b required email" id="mce-EMAIL" placeholder="Your email address">
+
+          <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+          <button type="submit" class="btn btn-danger m-b">Get a free churn analysis</button>
+          <div id="mce-responses" class="clear">
+            <div class="response" id="mce-error-response" style="color: #a81515; display:none"></div>
+            <div class="response" id="mce-success-response" style="display:none"></div>
+          </div>
       </form>
+
+
       <p style="color: #fff;">Or call 210.888.9357</p>
     </div>
   </div>
