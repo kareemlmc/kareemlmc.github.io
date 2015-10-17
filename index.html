@@ -20,8 +20,8 @@
 
       <script type="text/javascript">
         $(document).ready( function () {
-          $("#mc-embedded-subscribe-form").submit(function ( event ) {
-            $("#mce-error-response").hide();
+          $(".mc-embedded-subscribe-form").submit(function ( event ) {
+            $(".mce-error-response").nearest.hide();
               console.log($(this).attr('method'));
               console.log($(this).attr('action'));
               console.log($(this).serialize);
@@ -33,16 +33,16 @@
               dataType    : 'json',
               contentType: "application/json; charset=utf-8",
               error       : function(err) {
-                            $("#mce-error-response").html("There was an error.  Can you please try again?").show();
+                            $(".mce-error-response").nearest.html("There was an error.  Can you please try again?").show();
               },
               success     : function(data) {
                 if (data.result != "success") {
                     // Something went wrong, do something to notify the user. maybe alert(data.msg);
-                    $("#mce-error-response").html(data.msg).show();
+                    $(".mce-error-response").nearest.html(data.msg).show();
                     return false;
                 } else {
                     // It worked, carry on...
-                    $("#mc_embed_signup").replaceWith("<div class='alert alert-success'>Boom, you're in the club. You'll be lowering your churn in no time.</div>")
+                    $(".mc_embed_signup").nearest.replaceWith("<div class='alert alert-success'>Boom, you're in the club. You'll be lowering your churn in no time.</div>")
                     return false;
                 }
               }
