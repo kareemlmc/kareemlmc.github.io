@@ -286,7 +286,7 @@
           event.preventDefault();
           var e = $(this).siblings('.email').val();
           var $t = $(this);
-          var form_id = $(this).closest("form").id;
+          var form_id = $(this).closest("form").attr("id");
 
           analytics.identify(e);
           analytics.track("Filled Out Lead Form", {'form': form_id});
