@@ -67,11 +67,11 @@
 
   <div class="block app-ribbon p-y-lg">
     <div class="container text-center">
-      <div class="signup" style="color: #fff;">
+      <div class="signup">
         <p class="lead" style="color: #fff;">
           Get a free, no-risk churn analysis.
         </p>
-        <form action="" class="validate form-inline">
+        <form action="" class="validate form-inline" id="free_churn_analysis_top">
           <input type="email" value="" name="EMAIL" class="form-control m-b required email" placeholder="Your email address">
           <button type="submit" class="btn btn-danger m-b lead_button">Get your free churn analysis</button>
         </form>
@@ -79,7 +79,7 @@
       </div>
     </div>
   </div>
-  <div class="block block">
+  <div class="block ">
     <div class="container">
       <div class="row app-align-center">
         <div class="col-sm-6">
@@ -200,6 +200,22 @@
 
   <div class="block app-ribbon p-y-lg">
     <div class="container text-center">
+      <div class="signup">
+        <p class="lead" style="color: #fff;">
+          Let's talk about lowering your churn and increasing your revenue.
+        </p>
+        <form action="" class="validate form-inline" id="increase_revenue_bottom">
+          <input type="email" value="" name="EMAIL" class="form-control m-b required email" placeholder="Your email address">
+          <button type="submit" class="btn btn-danger m-b lead_button">I want to increase my revenue</button>
+        </form>
+        <p style="color: #fff;">Or call 210.888.9357</p>
+      </div>
+    </div>
+  </div>
+
+<!--
+  <div class="block app-ribbon p-y-lg">
+    <div class="container text-center">
       <p class="lead" style="color: #fff;">
         30% of SaaS companies have churn that's too high<super>*</super>.  Is yours one of them?
       </p>
@@ -207,7 +223,6 @@
 
           <input type="email" value="" name="EMAIL" class="form-control m-b required email mce-EMAIL" placeholder="Your email address">
 
-          <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
           <button type="submit" class="btn btn-danger m-b">Get your free churn analysis</button>
           <div class="clear mce-responses">
             <div class="response" class="mce-error-response" style="color: #a81515; display:none"></div>
@@ -217,7 +232,7 @@
       <p class="text-muted"><super>*</super>According to the Pacific Crest Private SaaS Company Survey</p>
     </div>
   </div>
-
+-->
 
   <div class="block app-footer" style="height: 60px; padding: 20px 0 0 0;">
      <div class="container app-footer">
@@ -271,9 +286,10 @@
           event.preventDefault();
           var e = $(this).siblings('.email').val();
           var $t = $(this);
+          var form_id = $(this).closest("form").id;
 
           analytics.identify(e);
-          analytics.track("Filled Out Lead Form", {'form': 'Free Analysis'});
+          analytics.track("Filled Out Lead Form", {'form': form_id});
 
           $.ajax({
             type: "POST",
@@ -283,12 +299,11 @@
                 'email': e,
             },
             success     : function(data) {
-//              console.log(data);
               if (data != "success") {
                 return false;
               } else {
                 // It worked, carry on...
-              $t.closest("div.signup").replaceWith("<h3>Thanks.  We'll be in touch soon to schedule a call.</h3>");
+              $t.closest("div.signup").replaceWith("<h3 style='color: #fff;'>Thanks.  We'll be in touch soon to schedule a call.</h3>");
                 return false;
               }
             }
