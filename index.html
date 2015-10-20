@@ -276,14 +276,14 @@
                 'email': e,
             },
             success     : function(data) {
-              console.log(data);
-//              if (data[0].status != "sent") {
-//                return false;
-//              } else {
-//                // It worked, carry on...
-//              $(".signup").replaceWith("<h3>We'll be in touch soon to schedule your session.</h3>");
-//                return false;
-//              }
+//              console.log(data);
+              if (data != "success") {
+                return false;
+              } else {
+                // It worked, carry on...
+              $(".signup").replaceWith("<h3>We'll be in touch soon to schedule your session.</h3>");
+                return false;
+              }
             }
           })
         })
