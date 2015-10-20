@@ -17,41 +17,6 @@
 
       <script src="//load.sumome.com/" data-sumo-site-id="e9b05ab75d241da8006c1d14ddae6209aaea1618d7b7472593c8eebe27424ff5" async="async"></script>
 
-
-      <script type="text/javascript">
-        $(document).ready( function () {
-          $(".mc-embedded-subscribe-form").submit(function ( event ) {
-            $(".mce-error-response").nearest.hide();
-              console.log($(this).attr('method'));
-              console.log($(this).attr('action'));
-              console.log($(this).serialize);
-            $.ajax({
-              type: $(this).attr('method'),
-              url: $(this).attr('action'),
-              data: $(this).serialize(),
-              cache       : false,
-              dataType    : 'json',
-              contentType: "application/json; charset=utf-8",
-              error       : function(err) {
-                            $(".mce-error-response").nearest.html("There was an error.  Can you please try again?").show();
-              },
-              success     : function(data) {
-                if (data.result != "success") {
-                    // Something went wrong, do something to notify the user. maybe alert(data.msg);
-                    $(".mce-error-response").nearest.html(data.msg).show();
-                    return false;
-                } else {
-                    // It worked, carry on...
-                    $(".mc_embed_signup").nearest.replaceWith("<div class='alert alert-success'>Boom, you're in the club. You'll be lowering your churn in no time.</div>")
-                    return false;
-                }
-              }
-            });
-          return false;
-          });
-        });
-      </script>
-
       <script type="text/javascript">
         // segment.com code
         !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t){var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(e,n)};analytics.SNIPPET_VERSION="3.1.0";
@@ -82,6 +47,9 @@
           <li>
             <a href="http://blog.thechurnguys.com">Blog</a>
           </li>
+          <li>
+            <a name="" style="color: #6c6f73">210.888.9357</a>
+          </li>
         </ul>
       </div><!--/.nav-collapse -->
     </div>
@@ -91,37 +59,30 @@
   <div class="block text-center block-inverse app-footer">
     <div class="container">
       <div class="row">
-        <h1 class="block-title">Is Churn Slowing Your SaaS Growth?</h1>
+        <h1 class="block-title">Want to Lower Your SaaS Churn?</h1>
         <h2>We can help.</h2>
       </div>
     </div>
   </div>
+
   <div class="block app-ribbon p-y-lg">
-    <div class="container text-center">
+    <div class="container text-center signup">
       <p class="lead" style="color: #fff;">
-        30% of SaaS companies have an unacceptable level of churn<super>*</super>.  Does yours?
+        Get a free, no-risk churn analysis.
       </p>
-      <form action="//lowermychurn.us8.list-manage.com/subscribe/post-json?u=a60d5de77b0be81f53906fbc9&amp;id=b6306062d4&amp;c=?" method="post" name="mc-embedded-subscribe-form" class="mc-embedded-subscribe-form validate form-inline" novalidate="">
-
-          <input type="email" value="" name="EMAIL" class="form-control m-b required email mce-EMAIL" placeholder="Your email address">
-
-          <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-          <button type="submit" class="btn btn-danger m-b">Get your free churn analysis</button>
-          <div class="clear mce-responses">
-            <div class="response" class="mce-error-response" style="color: #a81515; display:none"></div>
-            <div class="response" class="mce-success-response" style="display:none"></div>
-          </div>
+      <form action="" class="validate form-inline">
+        <input type="email" value="" name="EMAIL" class="form-control m-b required email" placeholder="Your email address">
+        <button type="submit" class="btn btn-danger m-b lead_button">Get your free churn analysis</button>
       </form>
-      <p class="text-muted"><super>*</super>According to the Pacific Crest Private SaaS Company Survey</p>
+      <p style="color: #fff;">Or call 210.888.9357</p>
     </div>
   </div>
-
   <div class="block block">
     <div class="container">
       <div class="row app-align-center">
         <div class="col-sm-6">
           <h3  class="m-t-0">Is Churn slowing growth?</h3>
-          <p class="lead m-b-md">You want your SaaS business to grow to be as big as possible.  You've made promises to investors, co-founders, and maybe even yourself.</p>
+          <p class="lead m-b-md">You want your SaaS business to grow to be as big as possible.  You've made promises to investors, co-founders, employees, and yourself.</p>
           <p class="lead m-b-md">But no matter how many new customers you acquire, your churn slows your growth to painful levels.  You're fighting an uphill battle. </p>
         </div>
         <div class="col-sm-6 col-sm-push-2">
@@ -139,7 +100,7 @@
       </div>
         <div class="col-sm-6">
           <h3  class="m-t-0">A world with less churn</h3>
-          <p class="lead m-b-md text-muted">You want every hard-earned customer that your team closes to stay a customer. You want them to have a great experience with your product and use it regularly.  You want them to stay on board as a customer until their acquisition cost is paid back and they become profitable.  And if a customer quits, you don't want it to counteract all the hard work your marketing and sales team is doing to close new business.</p>
+          <p class="lead m-b-md text-muted">You want every hard-earned customer that your team closes to stay a customer. You want them to have a great experience with your product and use it regularly.  You want them to stay until their acquisition cost is paid back and they become profitable.  And if a customer quits, you don't want it to counteract all the hard work your marketing and sales team is doing to close new business.</p>
         </div>
       </div>
     </div>
@@ -190,7 +151,7 @@
         <div class="col-xs-3 col-xs-offset-1" >
           <h5 class="m-t-0 m-b text-muted">Week 1</h5>
           <h4>Research & Review</h4>
-          <p class="text-left">We'll baseline your churn, look at what you've tried to lower it, gather your qualitative and quantitative churn data, and dive into your product to understand the full context of your business. </p>
+          <p class="text-left">We'll baseline your churn, look at how you've tried to lower it, gather your qualitative and quantitative churn data, and dive into your product to understand the full context of your business. </p>
         </div>
 
         <div class="col-xs-3 col-xs-offset-1">
@@ -235,13 +196,13 @@
     </div>
   </div>
 
-
   <div class="block app-ribbon p-y-lg">
-    <div class="container text-center mc_embed_signup_scroll">
+    <div class="container text-center">
       <p class="lead" style="color: #fff;">
-        Get a free, no-risk churn analysis.
+        30% of SaaS companies have churn that's too high<super>*</super>.  Is yours one of them?
       </p>
       <form action="//lowermychurn.us8.list-manage.com/subscribe/post-json?u=a60d5de77b0be81f53906fbc9&amp;id=b6306062d4&amp;c=?" method="post" name="mc-embedded-subscribe-form" class="mc-embedded-subscribe-form validate form-inline" novalidate="">
+
           <input type="email" value="" name="EMAIL" class="form-control m-b required email mce-EMAIL" placeholder="Your email address">
 
           <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
@@ -251,7 +212,7 @@
             <div class="response" class="mce-success-response" style="display:none"></div>
           </div>
       </form>
-      <p style="color: #fff;">Or call 210.888.9357</p>
+      <p class="text-muted"><super>*</super>According to the Pacific Crest Private SaaS Company Survey</p>
     </div>
   </div>
 
@@ -272,6 +233,64 @@
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/toolkit.js"></script>
     <script src="assets/js/application.js"></script>
+    <script type="text/javascript">
+      $(document).ready( function () {
+        $(".mc-embedded-subscribe-form").submit(function ( event ) {
+          $(".mce-error-response").nearest.hide();
+            console.log($(this).attr('method'));
+            console.log($(this).attr('action'));
+            console.log($(this).serialize);
+          $.ajax({
+            type: $(this).attr('method'),
+            url: $(this).attr('action'),
+            data: $(this).serialize(),
+            cache       : false,
+            dataType    : 'json',
+            contentType: "application/json; charset=utf-8",
+            error       : function(err) {
+                          $(".mce-error-response").nearest.html("There was an error.  Can you please try again?").show();
+            },
+            success     : function(data) {
+              if (data.result != "success") {
+                  // Something went wrong, do something to notify the user. maybe alert(data.msg);
+                  $(".mce-error-response").nearest.html(data.msg).show();
+                  return false;
+              } else {
+                  // It worked, carry on...
+                  $(".mc_embed_signup").nearest.replaceWith("<div class='alert alert-success'>Boom, you're in the club. You'll be lowering your churn in no time.</div>")
+                  return false;
+              }
+            }
+          });
+        return false;
+        });
+
+        $(".lead_button").click(function ( event ) {
+          event.preventDefault();
+          e = $(this).siblings('.email').val();
+          $.ajax({
+            type: "POST",
+            url: "http://kareemmayan.com/inc/send_form_email.php",
+            crossDomain: true,
+            data: {
+                'email': e,
+            },
+            success     : function(data) {
+              console.log(data);
+//              if (data[0].status != "sent") {
+//                return false;
+//              } else {
+//                // It worked, carry on...
+//              $(".signup").replaceWith("<h3>We'll be in touch soon to schedule your session.</h3>");
+//                return false;
+//              }
+            }
+          })
+        })
+    });
+    </script>
+
+
   </body>
 </html>
 
