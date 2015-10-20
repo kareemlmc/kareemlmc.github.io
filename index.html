@@ -67,14 +67,16 @@
 
   <div class="block app-ribbon p-y-lg">
     <div class="container text-center signup">
-      <p class="lead" style="color: #fff;">
-        Get a free, no-risk churn analysis.
-      </p>
-      <form action="" class="validate form-inline">
-        <input type="email" value="" name="EMAIL" class="form-control m-b required email" placeholder="Your email address">
-        <button type="submit" class="btn btn-danger m-b lead_button">Get your free churn analysis</button>
-      </form>
-      <p style="color: #fff;">Or call 210.888.9357</p>
+      <div class="signup" style="color: #fff;">
+        <p class="lead" style="color: #fff;">
+          Get a free, no-risk churn analysis.
+        </p>
+        <form action="" class="validate form-inline">
+          <input type="email" value="" name="EMAIL" class="form-control m-b required email" placeholder="Your email address">
+          <button type="submit" class="btn btn-danger m-b lead_button">Get your free churn analysis</button>
+        </form>
+        <p style="color: #fff;">Or call 210.888.9357</p>
+      </div>
     </div>
   </div>
   <div class="block block">
@@ -100,7 +102,7 @@
       </div>
         <div class="col-sm-6">
           <h3  class="m-t-0">A world with less churn</h3>
-          <p class="lead m-b-md text-muted">You want every hard-earned customer that your team closes to stay a customer. You want them to have a great experience with your product and use it regularly.  You want them to stay until their acquisition cost is paid back and they become profitable.  And if a customer quits, you don't want it to counteract all the hard work your marketing and sales team is doing to close new business.</p>
+          <p class="lead m-b-md text-muted">You want every hard-earned customer that your team closes to stay. You want them to have a great experience with your product and use it regularly.  You want them to stay until their acquisition cost is paid back and they become profitable.  And if a customer quits, you don't want it to counteract all the hard work your marketing and sales team is doing to close new business.</p>
         </div>
       </div>
     </div>
@@ -111,7 +113,7 @@
       <div class="row app-align-center">
         <div class="col-sm-6">
           <h3  class="m-t-0">We can help lower churn</h3>
-          <p class="lead m-b-md ">We can help you identify the type of churn you're experiencing, its causes, and give you recommendations on how to fix it.  We can even implement the recommendations for you, if you don't have the resources on hand.</p>
+          <p class="lead m-b-md ">We can help you identify the type of churn you're experiencing, its causes, and give you recommendations on how to fix it.  We can even implement the fixes for you if you don't have the resources on hand.</p>
         </div>
         <div class="col-sm-6 col-sm-push-2">
           <span class="icon icon-trophy" style="font-size: 200px; color: #5bc0de"></span>
@@ -268,6 +270,10 @@
         $(".lead_button").click(function ( event ) {
           event.preventDefault();
           e = $(this).siblings('.email').val();
+
+          analytics.identify(e);
+          analytics.track("Filled Out Lead Form", {'form': 'Free Analysis'});
+
           $.ajax({
             type: "POST",
             url: "http://kareemmayan.com/inc/send_form_email.php",
@@ -281,7 +287,7 @@
                 return false;
               } else {
                 // It worked, carry on...
-              $(".signup").replaceWith("<h3>We'll be in touch soon to schedule your session.</h3>");
+              $(".signup").replaceWith("<h3>Thanks.  We'll be in touch soon to schedule a call.</h3>");
                 return false;
               }
             }
