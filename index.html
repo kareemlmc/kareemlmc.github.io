@@ -83,7 +83,7 @@
     <div class="container">
       <div class="row app-align-center">
         <div class="col-sm-6">
-          <h3  class="m-t-0">Is Churn slowing growth?</h3>
+          <h3  class="m-t-0">Is churn slowing growth?</h3>
           <p class="lead m-b-md">You want your SaaS business to grow to be as big as possible.  You've made promises to investors, co-founders, employees, and yourself.</p>
           <p class="lead m-b-md">But no matter how many new customers you acquire, your churn slows your growth to painful levels.  You're fighting an uphill battle. </p>
         </div>
@@ -122,6 +122,23 @@
     </div>
   </div>
 
+
+  <div class="block app-ribbon p-y-lg">
+    <div class="container text-center">
+      <div class="signup">
+        <p class="lead" style="color: #fff;">
+          Churn too high?  We can lower it.
+        </p>
+        <form action="" class="validate form-inline" id="churn_too_high_mid">
+          <input type="email" value="" name="EMAIL" class="form-control m-b required email" placeholder="Your email address">
+          <button type="submit" class="btn btn-danger m-b lead_button">Get your free churn analysis</button>
+        </form>
+        <p style="color: #fff;">Or call 210.888.9357</p>
+      </div>
+    </div>
+  </div>
+
+<!--
   <div class="block app-ribbon p-y-lg">
     <div class="container text-center">
       <p class="lead" style="color: #fff;">
@@ -130,7 +147,6 @@
       <form action="//lowermychurn.us8.list-manage.com/subscribe/post-json?u=a60d5de77b0be81f53906fbc9&amp;id=b6306062d4&amp;c=?" method="post" name="mc-embedded-subscribe-form" class="mc-embedded-subscribe-form validate form-inline" novalidate="">
           <input type="email" value="" name="EMAIL" class="form-control m-b required email mce-EMAIL" placeholder="Your email address">
 
-          <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
           <button type="submit" class="btn btn-danger m-b">Show me the Case Study</button>
           <div class="clear mce-responses">
             <div class="response mce-error-response" style="color: #a81515; display:none"></div>
@@ -139,13 +155,14 @@
       </form>
     </div>
   </div>
+-->
 
   <div class="block block-secondary app-block-marketing-grid">
     <div class="container">
 
       <div class="row m-b-lg text-center">
         <div class="col-xs-12">
-          <h2 class="m-t-0 m-b">How We Build Your Churn Reduction Strategy</h2>
+          <h2 class="m-t-0 m-b">How we build your Churn Reduction Strategy</h2>
         </div>
       </div>
 
@@ -238,7 +255,7 @@
      <div class="container app-footer">
         <div class="row">
           <div class="col-sm-12 text-center">
-            <p>© 2015 The Churn Guys Inc.</p>
+            <p>© 2015 The Churn Guys Inc.  210.888.9357</p>
           </div>
         </div>
       </div>
@@ -252,36 +269,6 @@
     <script src="assets/js/application.js"></script>
     <script type="text/javascript">
       $(document).ready( function () {
-        $(".mc-embedded-subscribe-form").submit(function ( event ) {
-          $(".mce-error-response").nearest.hide();
-            console.log($(this).attr('method'));
-            console.log($(this).attr('action'));
-            console.log($(this).serialize);
-          $.ajax({
-            type: $(this).attr('method'),
-            url: $(this).attr('action'),
-            data: $(this).serialize(),
-            cache       : false,
-            dataType    : 'json',
-            contentType: "application/json; charset=utf-8",
-            error       : function(err) {
-                          $(".mce-error-response").nearest.html("There was an error.  Can you please try again?").show();
-            },
-            success     : function(data) {
-              if (data.result != "success") {
-                  // Something went wrong, do something to notify the user. maybe alert(data.msg);
-                  $(".mce-error-response").nearest.html(data.msg).show();
-                  return false;
-              } else {
-                  // It worked, carry on...
-                  $(".mc_embed_signup").nearest.replaceWith("<div class='alert alert-success'>Boom, you're in the club. You'll be lowering your churn in no time.</div>")
-                  return false;
-              }
-            }
-          });
-        return false;
-        });
-
         $(".lead_button").click(function ( event ) {
           event.preventDefault();
           var e = $(this).siblings('.email').val();
@@ -311,7 +298,16 @@
         })
     });
     </script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
+      ga('create', 'UA-106049-15', 'auto');
+      ga('send', 'pageview');
+
+    </script>
 
   </body>
 </html>
