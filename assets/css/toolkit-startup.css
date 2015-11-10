@@ -1,4 +1,18 @@
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+
+@font-face {
+    font-family: 'calluna_sansregular';
+    src: url('../fonts/CallunaSansRegular-webfont.eot');
+    src: url('../fonts/CallunaSansRegular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/CallunaSansRegular-webfont.woff2') format('woff2'),
+         url('../fonts/CallunaSansRegular-webfont.woff') format('woff'),
+         url('../fonts/CallunaSansRegular-webfont.ttf') format('truetype'),
+         url('../fonts/CallunaSansRegular-webfont.svg#calluna_sansregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -258,13 +272,15 @@ html {
   font-size: 10px;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
+
 body {
-  font-family: "Work sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "calluna_sansregular", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 19px;
   line-height: 1.4;
   color: #6c6f73;
   background-color: #ffffff;
 }
+
 input,
 button,
 select,
@@ -359,7 +375,6 @@ h6,
 .h4,
 .h5,
 .h6 {
-  font-family: "Work sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 500;
   line-height: 1.2;
   color: #2d3238;
@@ -2546,8 +2561,8 @@ fieldset[disabled] .btn-warning.active {
 }
 .btn-danger {
   color: #ffffff;
-  background-color: #ff3167;
-  border-color: #ff1854;
+  background-color: #000;
+  border-color: #fff;
 }
 .btn-danger:focus,
 .btn-danger.focus {
@@ -2557,8 +2572,8 @@ fieldset[disabled] .btn-warning.active {
 }
 .btn-danger:hover {
   color: #ffffff;
-  background-color: #fd0042;
-  border-color: #d90039;
+  background-color: #333;
+  border-color: #fff;
 }
 .btn-danger:active,
 .btn-danger.active,
@@ -5021,9 +5036,11 @@ body {
 .list-bordered li:last-child {
   border-bottom: 1px solid #bec8ce;
 }
+
 .text-serif {
   font-family: "Lora", Georgia, "Times New Roman", Times, serif;
 }
+
 .text-xs-left {
   text-align: left;
 }
@@ -8287,7 +8304,13 @@ fieldset[disabled] .block-inverse .btn-outline.btn-default.active {
 h1.block-title {
   font-size: 37px;
   line-height: 1;
+  color: #000;
 }
+
+h2.block-title {
+  color: #6c6f73;
+}
+
 .block .lead {
   font-size: 19px;
 }
@@ -8376,11 +8399,11 @@ h1.block-title {
   color: #ffffff;
 }
 .navbar-transparent .navbar-nav > li > a {
-  color: #ffffff;
+  color: #000;
 }
 .navbar-transparent .navbar-nav > li > a:hover,
 .navbar-transparent .navbar-nav > li > a:focus {
-  color: #e6e6e6;
+  color: #6C6F73;
   background-color: transparent;
 }
 .navbar-transparent .navbar-nav > .active > a,
