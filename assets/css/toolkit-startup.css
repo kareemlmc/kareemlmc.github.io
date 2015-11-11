@@ -274,7 +274,7 @@ html {
 }
 
 body {
-  font-family: "calluna_sansregular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 19px;
   line-height: 1.4;
   color: #6c6f73;
@@ -465,10 +465,12 @@ h2,
 h3,
 .h3 {
   font-size: 28px;
+  font-family: "Montserrat";
 }
 h4,
 .h4 {
   font-size: 19px;
+  font-family: "Montserrat";
 }
 h5,
 .h5 {
