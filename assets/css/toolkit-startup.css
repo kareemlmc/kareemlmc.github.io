@@ -274,7 +274,7 @@ html {
 }
 
 body {
-  font-family: "calluna_sansregular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 19px;
   line-height: 1.4;
   color: #6c6f73;
@@ -378,6 +378,7 @@ h6,
   font-weight: 500;
   line-height: 1.2;
   color: #2d3238;
+  font-family: "Bree Serif";
 }
 h1 small,
 h2 small,
@@ -8304,11 +8305,12 @@ fieldset[disabled] .block-inverse .btn-outline.btn-default.active {
 h1.block-title {
   font-size: 37px;
   line-height: 1;
-  color: #000;
+  color: #555;
 }
 
 h2.block-title {
   color: #6c6f73;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 .block .lead {
@@ -8380,7 +8382,7 @@ h2.block-title {
   }
   .h1.block-title,
   h1.block-title {
-    font-size: 42px;
+    font-size: 72px;
   }
 }
 .navbar-transparent {
