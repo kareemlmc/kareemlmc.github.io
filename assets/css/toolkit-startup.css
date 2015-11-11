@@ -465,12 +465,12 @@ h2,
 h3,
 .h3 {
   font-size: 28px;
-  font-family: "Montserrat";
+  font-family: "Lato";
 }
 h4,
 .h4 {
   font-size: 19px;
-  font-family: "Montserrat";
+  font-family: "Lato";
 }
 h5,
 .h5 {
@@ -8306,8 +8306,9 @@ fieldset[disabled] .block-inverse .btn-outline.btn-default.active {
 .h1.block-title,
 h1.block-title {
   font-size: 37px;
-  line-height: 1;
-  color: #555;
+  line-height: 1.5;
+  color: #fff;
+  background-color: #c24b2f;
 }
 
 h2.block-title {
