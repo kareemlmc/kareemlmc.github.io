@@ -274,7 +274,7 @@ html {
 }
 
 body {
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "calluna_sansregular", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 19px;
   line-height: 1.4;
   color: #6c6f73;
@@ -8382,7 +8382,7 @@ h2.block-title {
   }
   .h1.block-title,
   h1.block-title {
-    font-size: 72px;
+    font-size: 66px;
   }
 }
 .navbar-transparent {
