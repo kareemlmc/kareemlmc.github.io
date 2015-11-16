@@ -235,16 +235,16 @@
 
             <p>We'll be in touch today (if it's M-F before noon PT) or on the next business day to figure out how we can help bring your app to life.</p>
 
-            <form>
+            <form id="bottom_cta_form">
               <div class="form-group">
-                <input class="form-control m-b" placeholder="What's your name?">
-                <input class="form-control m-b" placeholder="What's your email address?">
-                <input class="form-control m-b" placeholder="What's your phone number?">
-                <textarea class="form-control m-b" rows="6" placeholder="What would you like ProductCo to do for you?"></textarea>
+                <input class="form-control m-b" placeholder="What's your name?" id="name">
+                <input class="form-control m-b" placeholder="What's your email address?" id="email">
+                <input class="form-control m-b" placeholder="What's your phone number?"  id="phone">
+                <textarea class="form-control m-b" rows="6" placeholder="What would you like ProductCo to do for you?" id="description"></textarea>
               </div>
 
               <div class="col-sm-9 col-sm-offset-1 text-center">
-                <button class="btn btn-primary m-b">Get started</button>
+                <button class="btn btn-primary m-b lead-button">Get started</button>
               </div>
             </form>
           </div>
@@ -271,9 +271,12 @@
     <script src="assets/js/application.js"></script>
     <script type="text/javascript">
       $(document).ready( function () {
-        $(".lead_button").click(function ( event ) {
+        $(".lead-button").click(function ( event ) {
           event.preventDefault();
-          var e = $(this).siblings('.email').val();
+          var email = $(this).siblings('#email').val();
+          var name = $(this).siblings('#name').val();
+          var desc = $(this).siblings('#desc').val();
+          var phone = $(this).siblings('#phone').val();
           var $t = $(this);
           var form_id = $(this).closest("form").attr("id");
 
@@ -285,7 +288,10 @@
             url: "http://kareemmayan.com/inc/send_form_email.php",
             crossDomain: true,
             data: {
-                'email': e,
+              'email': email,
+              'name': name,
+              'phone': phone,
+              'desc': desc
             },
             success     : function(data) {
               if (data != "success") {
