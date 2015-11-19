@@ -275,7 +275,7 @@ html {
 
 body {
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 19px;
+  font-size: 24px;  /* used to be 19px */
   line-height: 1.4;
   color: #6c6f73;
   background-color: #ffffff;
@@ -465,12 +465,12 @@ h2,
 h3,
 .h3 {
   font-size: 28px;
-font-family: "Merriweather";
+/*  font-family: "Merriweather"; */
 }
 h4,
 .h4 {
   font-size: 19px;
-  font-family: "Merriweather";
+/*  font-family: "Merriweather";*/
 }
 h5,
 .h5 {
@@ -481,7 +481,7 @@ h6,
   font-size: 13px;
 }
 p {
-  margin: 0 0 10.5px;
+  margin: 0 0 18px; /* used to be 0 0 10.5px */
 }
 .lead {
   margin-bottom: 21px;
