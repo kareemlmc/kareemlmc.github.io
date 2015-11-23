@@ -275,7 +275,7 @@ html {
 
 body {
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 24px;  /* used to be 19px */
+  font-size: 18px;
   line-height: 1.4;
   color: #6c6f73;
   background-color: #ffffff;
@@ -415,7 +415,7 @@ h2,
 h3,
 .h3 {
   margin-top: 21px;
-  margin-bottom: 10.5px;
+  margin-bottom: 26px;
 }
 h1 small,
 .h1 small,
