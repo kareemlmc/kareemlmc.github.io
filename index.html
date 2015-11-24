@@ -294,8 +294,12 @@
             },
             success     : function(data) {
               if (data != "success") {
+                console.log("failure");
+                console.log(data);
                 return false;
               } else {
+                console.log("success");
+                console.log(data);
                 // It worked, carry on...
               $t.closest("div.signup").replaceWith("<h3 style='color: #fff;'>Thanks.  We'll be in touch soon to help.</h3>");
                 return false;
