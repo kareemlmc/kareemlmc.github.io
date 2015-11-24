@@ -55,13 +55,20 @@
   <div class="block text-center" style="padding: 150px 0 50px;">
     <div class="container">
       <div class="row">
-        <h1 class="block-title">Let's build and grow your web product</h1>
-        <h2 class="block-title">Partner with our experienced team to grow your business.</h2>
+        <div class="col-sm-12" >
+          <h1 class="block-title">Let's build and grow your web product</h1>
+          <h2 class="block-title">Partner with our experienced software team to grow your business.</h2>
+        </div>
+        <div id="choice" class="col-sm-12" style="margin: 30px 0;">
+          <h3>Do you want to</h3>
+          <button class="btn btn-xl btn-primary m-b" id="show_build">Build a new web product</button> or
+          <button class="btn btn-xl btn-primary m-b" id="show_grow">Grow my existing SaaS app</button>
+       </div>
       </div>
     </div>
   </div>
 
-  <div id="build">
+  <div id="build" class="hide">
     <div class="block">
       <div class="container">
         <div class="row">
@@ -272,6 +279,16 @@
 
     <script type="text/javascript">
       $(document).ready( function () {
+        $("#show_build").click(function ( event ) {
+          $("#choice").hide();
+          $("#build").removeClass('hide');
+        })
+
+        $("#show_grow").click(function ( event ) {
+          $("#choice").hide();
+          $("#grow").removeClass('hide');
+        })
+
         $(".form").submit(function ( event ) {
           event.preventDefault();
           var email = $(this).find(".email").val();
