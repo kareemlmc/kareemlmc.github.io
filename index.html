@@ -279,9 +279,6 @@
           var $t = $(this);
           var form_id = $(this).closest("form").attr("id");
 
-          analytics.identify(email);
-          analytics.track("Filled Out Lead Form", {'form': form_id});
-
           $.ajax({
             type: "POST",
             url: "http://kareemmayan.com/inc/send_form_email.php",
@@ -302,6 +299,8 @@
                 console.log(data);
                 // It worked, carry on...
               $t.closest("div.signup").replaceWith("<h3 style='color: #fff;'>Thanks.  We'll be in touch soon to help.</h3>");
+                analytics.identify(email);
+                analytics.track("Filled Out Lead Form", {'form': form_id});
                 return false;
               }
             }
