@@ -273,10 +273,10 @@
       $(document).ready( function () {
         $(".lead-button").click(function ( event ) {
           event.preventDefault();
-          var email = $(this).siblings('.email').val();
-          var name = $(this).siblings('.name').val();
-          var desc = $(this).siblings('.desc').val();
-          var phone = $(this).siblings('.phone').val();
+          var email = $(this).closest("div").prev().find(".email").val();
+          var name = $(this).closest("div").prev().find('.name').val();
+          var desc = $(this).closest("div").prev().find('.desc').val();
+          var phone = $(this).closest("div").prev().find('.phone').val();
           var $t = $(this);
           var form_id = $(this).closest("form").attr("id");
 
