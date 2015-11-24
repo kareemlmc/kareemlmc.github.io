@@ -237,7 +237,7 @@
 
               <p>We'll be in touch today (if it's M-F before noon PT) or on the next business day to figure out how we can help bring your app to life.</p>
 
-              <form id="bottom_cta_form">
+              <form id="bottom_cta_form" class="form">
                 <div class="form-group">
                   <input class="form-control m-b name" placeholder="What's your name?">
                   <input class="form-control m-b email" placeholder="What's your email address?">
@@ -271,7 +271,7 @@
 
     <script type="text/javascript">
       $(document).ready( function () {
-        $(".lead-button").click(function ( event ) {
+        $(".form").submit(function ( event ) {
           event.preventDefault();
           var email = $(this).closest("div").prev().find(".email").val();
           var name = $(this).closest("div").prev().find('.name').val();
@@ -292,11 +292,8 @@
             },
             success     : function(data) {
               if (data != "success") {
-//                console.log("failure");
                 return false;
               } else {
-//                console.log("success");
-                // It worked, carry on...
               $t.closest("div.signup").replaceWith("<h3>Thanks.  We'll be in touch soon to help.</h3>");
                 analytics.identify(email);
                 analytics.track("Filled Out Lead Form", {'form': form_id});
