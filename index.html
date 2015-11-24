@@ -295,8 +295,8 @@
               if (data != "success") {
                 return false;
               } else {
-              $t.closest("div.signup").closest(".row").css("text-align", "center");
-              $t.closest("div.signup").replaceWith("<h3>Thanks.  We'll be in touch soon to help.</h3>");
+                $t.closest("div.signup").replaceWith("<h3 class='thanks'>Thanks.  We'll be in touch soon to help.</h3>");
+                $("h3.thanks").closest(".row").css("text-align", "center");
                 analytics.identify(email);
                 analytics.track("Filled Out Lead Form", {'form': form_id});
                 return false;
