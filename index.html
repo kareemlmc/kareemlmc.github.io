@@ -18,6 +18,10 @@
       <link href="assets/css/toolkit-startup.css" rel="stylesheet">
       <link href="assets/css/application-startup.css" rel="stylesheet">
 
+      <script src="assets/js/jquery.min.js"></script>
+      <script src="assets/js/toolkit.js"></script>
+      <script src="assets/js/application.js"></script>
+
       <script type="text/javascript">
         // segment.com code
         !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t){var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(e,n)};analytics.SNIPPET_VERSION="3.1.0";
@@ -242,7 +246,7 @@
                 </div>
 
                 <div class="col-sm-9 col-sm-offset-1 text-center">
-                  <button class="btn btn-lg btn-primary m-b lead-button">Get started</button>
+                  <button id="lead-button" class="btn btn-lg btn-primary m-b lead-button">Get started</button>
                 </div>
               </form>
             </div>
@@ -265,9 +269,6 @@
 </div>
 
 
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/toolkit.js"></script>
-    <script src="assets/js/application.js"></script>
     <script type="text/javascript">
       $(document).ready( function () {
         $(".lead-button").click(function ( event ) {
