@@ -242,11 +242,11 @@
                   <input class="form-control m-b name" placeholder="What's your name?">
                   <input class="form-control m-b email" placeholder="What's your email address?">
                   <input class="form-control m-b phone" placeholder="What's your phone number?"  >
-                  <textarea class="form-control m-b desc" rows="6" placeholder="What would you like ProductCo to do for you?"></textarea>
+                  <textarea class="form-control m-b desc" rows="6" placeholder="How can we help?"></textarea>
                 </div>
 
                 <div class="col-sm-9 col-sm-offset-1 text-center">
-                  <button id="lead-button" class="btn btn-lg btn-primary m-b lead-button">Get started</button>
+                  <button class="btn btn-lg btn-primary m-b lead-button">Get started</button>
                 </div>
               </form>
             </div>
@@ -292,14 +292,12 @@
             },
             success     : function(data) {
               if (data != "success") {
-                console.log("failure");
-                console.log(data);
+//                console.log("failure");
                 return false;
               } else {
-                console.log("success");
-                console.log(data);
+//                console.log("success");
                 // It worked, carry on...
-              $t.closest("div.signup").replaceWith("<h3 style='color: #fff;'>Thanks.  We'll be in touch soon to help.</h3>");
+              $t.closest("div.signup").replaceWith("<h3>Thanks.  We'll be in touch soon to help.</h3>");
                 analytics.identify(email);
                 analytics.track("Filled Out Lead Form", {'form': form_id});
                 return false;
