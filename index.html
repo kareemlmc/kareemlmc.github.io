@@ -289,14 +289,14 @@
         </div>
       </div>
 
-    <div class="block" style="margin-bottom: 20px; ">
+    <div class="block" style="margin-bottom: 20px;" id="signup">
       <div class="container">
         <div class="row">
           <h2 class="text-center  block-title" >Let's grow your business together</h2>
 
           <div class="row">
             <div class="col-sm-8 col-sm-offset-2">
-              <div class="signup">
+              <div>
                 <p>Please fill out the form below with your name, contact information, and description of your project.</p>
                 <form id="bottom_cta_form" class="form">
                   <div class="form-group">
@@ -360,6 +360,7 @@
             data: {
               'email': email,
               'name': name,
+              'budget': budget,
               'phone': phone,
               'desc': desc
             },
@@ -367,7 +368,7 @@
               if (data != "success") {
                 return false;
               } else {
-                $t.closest("div.signup").replaceWith("<h3 class='thanks'>Thanks.  We'll be in touch soon to help.</h3>");
+                $t.closest("div#signup").replaceWith("<h3 class='thanks block-title'>Thanks.  We'll be in touch soon to help.</h3>");
                 $("h3.thanks").closest(".row").css("text-align", "center");
                 analytics.identify(email);
                 analytics.track("Filled Out Lead Form", {'form': form_id});
