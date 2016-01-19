@@ -2307,12 +2307,12 @@ fieldset[disabled] .btn-default.active {
 .btn-primary.focus {
   color: #ffffff;
   background-color: #3B8686;
-  border-color: #0B486B;
+  border-color: #3B8686;
 }
 .btn-primary:hover {
   color: #ffffff;
-  background-color: #79BD9A;
-  border-color: #79BD9A;
+  background-color: #3B8686;
+  border-color: #3B8686;
 }
 .btn-primary:active,
 .btn-primary.active,
