@@ -289,9 +289,9 @@
         </div>
       </div>
 
-    <div class="block" style="margin-bottom: 20px;" id="signup">
+    <div class="block" style="margin-bottom: 20px;">
       <div class="container">
-        <div class="row">
+        <div class="row"  id="signup">
           <h2 class="text-center  block-title" >Let's grow your business together</h2>
 
           <div class="row">
@@ -304,7 +304,7 @@
                     <input class="form-control m-b email" placeholder="What's your email address?">
                     <input class="form-control m-b phone" placeholder="What's your phone number?"  >
                     <div class="m-b">
-                      <select style="font-size: 15px; color: #999;" class="budget">
+                      <select style="font-size: 15px; color: #999;" class="form-control budget">
                         <option value="didn't answer">What's your budget?</option>
                         <option value="under 25k">Under 25k USD</option>
                         <option value="25-50k">25 - 50k USD</option>
@@ -368,8 +368,8 @@
               if (data != "success") {
                 return false;
               } else {
-                $t.closest("div#signup").replaceWith("<h3 class='thanks block-title'>Thanks.  We'll be in touch soon to help.</h3>");
-                $("h3.thanks").closest(".row").css("text-align", "center");
+                $t.closest("div#signup").replaceWith("<div class='row'><h2 class='thanks block-title'>Thanks.  We'll be in touch soon to help.</h2></div>");
+                $("h2.thanks").closest(".row").css("text-align", "center");
                 analytics.identify(email);
                 analytics.track("Filled Out Lead Form", {'form': form_id});
                 return false;
