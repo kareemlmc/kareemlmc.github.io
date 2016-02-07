@@ -165,3 +165,8 @@
     align-items: center;
   }
 }
+
+h4.subhead {
+  font-size: 23px;
+  margin-top: 30px;
+}
