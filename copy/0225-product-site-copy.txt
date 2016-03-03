@@ -1,0 +1,52 @@
+- What's your process
+- What do I need
+
+===
+
+Possible Customers
+
+1. Entrepreneurs with money but no tech team
+2. Existing non-tech business that needs a web app
+3. Existing tech business that needs feature dev or new product
+
+Ideally:
+  2. Existing non-tech business that needs a web app
+
+Identify what to build
+
+Expanding your business
+Growth and enter new markets
+We can help you expand your business by designing and developing compelling new products & services. From concept to launch we apply startup style customer development and agile engineering approaches to the development of new products and lines of business. AT&T hired us to help them develop and launch mHealth, their industry leading mobile health platform.
+
+---
+
+- Chimp
+- Arbour
+- Swod
+- Elastic Path
+- Valor Fireplaces
+- Scolars
+- ESPN
+- FOX Interactive Media
+- Ontario Liberal Party
+- ALS TDI
+-
+
+---
+
+Take Founder's vision and turn it into a product on the web.
+
+Help paper based systems and brick and mortar companies do business on the web.
+
+
+Need a product built?
+1. Have some old system (paper or tech) that you need updated
+  -
+
+2. Want to get into a new market?  We can help build the product that will take you there. How?
+  - Understand your goals, the market, your ideal customers / users, your marketing strategy.
+  - Put customer at center of the product design approach so that we make something they love
+  - Build it with lean methodologies
+  - Instrument it so that you get the key metrics you need on an ongoing basis
+  - Hand it off to your team with well-documented, maintainable, robust code
+  - OR maintain it
