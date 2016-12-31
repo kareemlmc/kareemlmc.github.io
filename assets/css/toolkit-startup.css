@@ -290,13 +290,14 @@ textarea {
   line-height: inherit;
 }
 a {
-  color: #2595ff;
-  text-decoration: none;
+  color: #3B8686;
+  text-decoration: underline;
 }
 a:hover,
 a:focus {
-  color: #006fd7;
-  text-decoration: underline;
+  color: #fff;
+  background-color: #3B8686;
+  text-decoration: none;
 }
 a:focus {
   outline: thin dotted;
@@ -3195,7 +3196,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .nav > li > a {
   position: relative;
   display: block;
-  padding: 10px 15px;
+  padding: 10px;
+  margin-left: 5px;
 }
 .nav > li > a:hover,
 .nav > li > a:focus {
@@ -3567,10 +3569,11 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   }
   .navbar-nav > li {
     float: left;
+    font-size: 18px;
   }
   .navbar-nav > li > a {
-    padding-top: 14.5px;
-    padding-bottom: 14.5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
   }
 }
 .navbar-form {
@@ -3715,12 +3718,13 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   color: #777777;
 }
 .navbar-default .navbar-nav > li > a {
-  color: #777777;
+  color: #3B8686;
+  text-decoration: none;
 }
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
-  color: #333333;
-  background-color: transparent;
+  color: #fff;
+  background-color: #3B8686;
 }
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:hover,
@@ -8404,18 +8408,21 @@ h2.block-title {
   color: #ffffff;
 }
 .navbar-transparent .navbar-nav > li > a {
-  color: #000;
+  color: #3B8686;
+  text-decoration: none;
 }
 .navbar-transparent .navbar-nav > li > a:hover,
 .navbar-transparent .navbar-nav > li > a:focus {
-  color: #6C6F73;
-  background-color: transparent;
+  color: #fff;
+  background-color: #3B8686;
+  border-radius: 3px;
 }
 .navbar-transparent .navbar-nav > .active > a,
 .navbar-transparent .navbar-nav > .active > a:hover,
 .navbar-transparent .navbar-nav > .active > a:focus {
-  color: #e6e6e6;
-  background-color: transparent;
+  color: #fff;
+  background-color: #3B8686;
+  border-radius: 3px;
 }
 .navbar-transparent .navbar-nav > .disabled > a,
 .navbar-transparent .navbar-nav > .disabled > a:hover,

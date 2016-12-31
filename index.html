@@ -26,7 +26,7 @@
         // segment.com code
         !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t){var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(e,n)};analytics.SNIPPET_VERSION="3.1.0";
         analytics.load("ZCiAmPAcmApDpjQYrWkwdmFiVtm5pSxB");
-        analytics.page("Home")
+        analytics.page("Our Work")
         }}();
       </script>
   </head>
@@ -36,7 +36,7 @@
   <nav class="navbar navbar-transparent navbar-fixed-top navbar-padded app-navbar p-t-md">
     <div class="container">
       <div class="navbar-header" style="background-color: #3B8686;">
-        <a>
+        <a href="index.html">
         <img style="width: 250px; height: 107px; padding: 20px; background-color: transparent;" src="assets/img/levelup-dept-logo.png" >
         <!--
           <strong style="padding: 12px; border-radius: 4px; color: #fff; background: #3B8686;">
@@ -47,9 +47,12 @@
       </div>
       <div class="navbar-collapse collapse text-uppercase">
         <ul class="nav navbar-nav navbar-right">
-         <li>
-            <a name="" style="color: #6c6f73">210.888.9357</a>
-          </li>
+        <li class="active">
+          <a href="index.html">Home</a>
+        </li>
+        <li>
+          <a href="work.html">Our Work</a>
+        </li>
         </ul>
       </div><!--/.nav-collapse -->
     </div>
@@ -340,8 +343,8 @@
                     <textarea class="form-control m-b desc" rows="6" placeholder="How can we help?"></textarea>
                   </div>
 
-                  <div class="col-sm-9 col-sm-offset-1 text-center">
-                    <button class="btn btn-lg btn-primary m-b lead-button">Get started</button>
+                  <div class="col-sm-8 col-sm-offset-2 text-center">
+                    <button class="btn btn-lg btn-primary m-b lead-button">Let's Talk</button>
                   </div>
                 </form>
               </div>
